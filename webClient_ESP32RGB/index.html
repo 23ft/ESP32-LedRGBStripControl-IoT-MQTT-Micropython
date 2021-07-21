@@ -1,0 +1,83 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="style/style.css">
+    
+    
+    
+</head>
+
+<body>
+    <div class="btn_mqtt">
+        <button id="connect" class= "buttonConnect"> Conectar MQTT </button>
+        <button id="disconnect" class= "buttonConnect"> Discconect </button>
+        <label id="statusESP"></label>
+    </div>
+    <div class="controll" id="cont">
+        <div class="title"> 
+            <h2> ESP32 - RGB Controller </h2>
+            <p><strong> <a href="http://instagram.com/_23ft_" class="info" target="_blank"> @_23ft_ </a> </strong></p> 
+        </div>
+        <div class="botones">
+            <div class="botons botons1">
+
+                <button id ="red_mod1" class="button button1 btn_mode">   <i class="far fa-lightbulb fa-3x icons icono1"> </i> </button>
+                <button id ="red_mod2" class="button button1_2 btn_mode">   <i class="far fa-lightbulb fa-3x icons icono1"> </i> </button> 
+                <button id ="red_mod3" class="button button1_3 btn_mode">   <i class="far fa-lightbulb fa-3x icons icono1"> </i> </button> 
+                <button id ="red_mod4" class="button button1_4 btn_mode">   <i class="far fa-lightbulb fa-3x icons icono1"> </i> </button> 
+                <button id ="red_mod5" class="button button1_5 btn_mode">   <i class="far fa-lightbulb fa-3x icons icono1"> </i> </button> 
+            </div>
+            <div class="botons botons2">
+
+                <button id="green_mod1" class="button button2 btn_mode"> <i class="far fa-lightbulb fa-3x icons icono2" > </i> </button> 
+                <button id="green_mod2" class="button button2_1 btn_mode"> <i class="far fa-lightbulb fa-3x icons icono2" > </i> </button> 
+                <button id="green_mod3" class="button button2_2 btn_mode"> <i class="far fa-lightbulb fa-3x icons icono2" > </i> </button> 
+                <button id="green_mod4" class="button button2_3 btn_mode"> <i class="far fa-lightbulb fa-3x icons icono2" > </i> </button> 
+                <button id="green_mod5" class="button button2_4 btn_mode"> <i class="far fa-lightbulb fa-3x icons icono2" > </i> </button> 
+            </div>
+            <div class="botons botons3">
+
+                <button id="blue_mod1" class="button button3 btn_mode btn_mode"  > <i class="far fa-lightbulb fa-3x icons icono3"> </i>  </button> 
+                <button id="blue_mod2" class="button button3_1 btn_mode btn_mode"> <i class="far fa-lightbulb fa-3x icons icono3"> </i>  </button> 
+                <button id="blue_mod3" class="button button3_2 btn_mode btn_mode"> <i class="far fa-lightbulb fa-3x icons icono3"> </i>  </button> 
+                <button id="blue_mod4" class="button button3_3 btn_mode btn_mode"> <i class="far fa-lightbulb fa-3x icons icono3"> </i>  </button> 
+                <button id="blue_mod5" class="button button3_4 btn_mode btn_mode"> <i class="far fa-lightbulb fa-3x icons icono3"> </i>  </button> 
+            </div>  
+            <div class="botons botons4">
+
+                <button id="end_esp"       class="button button4 btn_mode">     <i class="fas fa-ban icons icono4"></i> </button> </a>
+                <button id="white_mod1" class="button button4_1 btn_mode">  <i class="far fa-lightbulb fa-3x icons icono4"></i> </button> </a>
+                <button id="white_mod2" class="button button4_2 btn_mode">  <i class="far fa-lightbulb fa-3x icons icono4"></i> </button> </a>
+                <button id="white_mod3" class="button button4_3 btn_mode">  <i class="far fa-lightbulb fa-3x icons icono4"></i> </button> </a>
+                <button id="white_mod4" class="button button4_4 btn_mode">  <i class="far fa-lightbulb fa-3x icons icono4"></i> </button> </a>
+
+            </div>
+        </div>
+        <div class="switches">
+            <div class="switch1 switchcontainer">
+                <p class="secs"> Secuencia 1 </p>
+                <label class="switch">
+                    <input type="checkbox" onchange="secuencia1(this)" %s>
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="switch2 switchcontainer">
+                <p class="secs"> Secuencia 2 </p>
+                <label class="switch">
+                    <input type="checkbox" onchange="secuencia2(this)" %s>
+                    <span class="slider"></span>
+                </label>
+            </div>  
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

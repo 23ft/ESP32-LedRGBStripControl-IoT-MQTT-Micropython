@@ -1,0 +1,335 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+html {
+    font-family: Arial;
+    display: inline-block;
+    margin: 0px auto;
+    /* text-align: center; */
+    
+}
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    background-color: rgb(138, 138, 138);
+}
+
+/* Contenedor princiapl = Control RGB */
+.controll{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    border-radius: 30px;
+    border: #ccc 1.3px solid;
+    padding: 2.5vh 2vw;
+    background-color:rgb(214, 211, 211);
+    visibility: visible;
+}
+
+/* Contenedor hijo = Seccion titulo */
+.title{
+    color: #cdc;
+    display: flex;
+    flex-direction: column;
+    width: 24vw;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 15px;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-items: center;
+    background-color: #000;
+}
+
+.title h2 {
+    font-size: 1.5vw;
+    /* border: 2px solid white; */
+    margin: 0;
+}
+
+.title p {
+    /* border: 2px solid white; */
+    font-style: oblique;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 1vw;
+    color: tomato;
+    margin-top: -1px;
+    margin-bottom: 0;
+}
+
+
+/* Contenedor hijo = Seccion botones */
+.controll .botones {
+    display: flex;
+    flex-direction: row;
+    border-radius: 15px;
+    border: #eee 1px solid;
+    width: 24vw;
+    padding: .5vw;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+
+
+}
+
+/* Contenedor hijo = Seccion switches */
+.switches {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    border-radius: 15px;
+    border: #eee 1px solid;
+    width: 24vw;
+    background-color: #000;
+    padding: .5vw;   
+}
+
+/* Botones */
+.botons {
+    margin: 1vh 1vw 1vh 1vw;
+    padding: .3vh .3vw;
+}
+
+.botons a {
+    text-decoration: none;
+}
+
+.button {
+    width: 3vw;
+    /* height: 6vh; */
+    border: #fcf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 3vh 0px 3vh 0px;
+    padding: 2vh 1.5vw;
+}
+/* Red Mode Buttons */
+.button1 {
+    background-color: #f00;
+    border-radius: 1em;
+}
+
+/* rgb(204, 102, 0) */
+.button1_2 { 
+    background-color: #cc6600; 
+    border-radius: 1em;
+}
+
+/* rgb(255, 153, 0) */
+.button1_3 {
+    background-color: #ff9900;
+    border-radius: 1em;
+}
+
+/* rgb(204, 153, 0) */
+.button1_4 {
+    background-color: #cc9900;
+    border-radius: 1em;
+}
+
+/* rgb(255, 255, 0) */
+.button1_5 {
+    background-color: #ffff00;
+    border-radius: 1em;
+}
+
+/* Green Mode Buttons */
+.button2 {
+    background-color: #0f0;
+    border-radius: 1em;
+}
+
+/* rgb(0, 204, 0) */
+.button2_1 {
+    background-color: #00cc00;
+    border-radius: 1em;
+}
+
+/* rgb(0, 204, 102) */
+.button2_2 {
+    background-color: #00cc66;
+    border-radius: 1em;
+}
+
+/* rgb(0, 204, 153) */
+.button2_3 {
+    background-color: #00cc99;
+    border-radius: 1em;
+}
+
+.button2_4 {
+    background-color: #339966;
+    border-radius: 1em;
+}
+
+/* BLue Mode Buttons */
+.button3 {
+    background-color: rgb(0, 0, 255);
+    border-radius: 1em;
+}
+
+/* rgb(0, 0, 153) */
+.button3_1 {
+    background-color: #000099;
+    border-radius: 1em;
+}
+
+/* rgb(51, 51, 153) */
+.button3_2 {
+    background-color: #333399;
+    border-radius: 1em;
+}
+
+/* rgb(102, 0, 204) */
+.button3_3 {
+    background-color: #6600cc;
+    border-radius: 1em;
+}
+
+/* rgb(153, 102, 255) */
+.button3_4 {
+    background-color: #9966ff;
+    border-radius: 1em;
+}
+
+/* Button stop */
+.button4 {
+    background-color: #600;
+    border-radius: 1em;
+}
+
+.button4_1 {
+    background-color: white;
+    border-radius: 1em;
+}
+
+/* rgb(255, 153, 255) */
+.button4_2 {
+    background-color: #ff99ff;
+    border-radius: 1em;
+}
+
+/* rgb(255, 102, 255) */
+.button4_3 {
+    background-color: #ff66ff;
+    border-radius: 1em;
+}
+
+/* rgb(153, 204, 255) */
+.button4_4 {
+    background-color: #99ccff;
+    border-radius: 1em;
+}
+
+/* *** BOTON CONNECT MQTT *** */
+
+.btn_mqtt {
+    display: flex;
+    width: 30vw;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 6px 13vw;
+    border: 1px solid white;
+    padding: 10px;
+    background-color:rgb(214, 211, 211);
+    border-radius: 10px;
+}
+.buttonConnect {
+    border-radius: 10px;
+    width: 13vw;
+    border: #ccc 1.3px solid;
+    padding: 2.5vh 2vw;
+    background-color:rgb(120, 120, 120);
+    font-weight: bold;
+    margin: 3px 0px;
+}
+
+.buttonConnect:hover {
+    background-color: rgb(80, 80, 80);
+}
+
+
+/* Iconos */
+.icons {
+    font-size: 2.5vw;
+}
+
+/* Switches interactivos */
+
+/* Contenedor switches */
+
+.switchcontainer{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    /* border:2px solid white; */
+    align-items: center;
+    justify-items: center;
+    
+}
+
+/* Caracteristicas generales nombre switch */
+.secs {
+    /* outline: 2px solid white; */
+    width: 10vw;
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+
+/* Caracterisitcias generales switch */
+.switch {
+   width: 4.5vmax;
+   height: 2.7vmax;
+              
+}
+
+input {
+    background-color: black;
+}
+
+.switch input {
+    display: none
+}  
+
+.slider {
+    position: absolute;
+    width: 4vmax;
+    height: 2.5vmax;
+    background-color: #ccc;
+    border-radius: 1em;
+    transition: ease-in .10s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 2vmax;
+    width: 2vmax;
+    margin: .3vmax 0em 0em .4vmax;
+    background-color: rgb(255, 167, 5);
+    -webkit-transition: .4s;
+    transition: ease-in .4s;
+    border-radius: 2em;
+}
+
+input:checked + .slider {
+   background-color: #aaf; 
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(1.5px);
+    -ms-transform: translateX(1.5px);
+    transform: translateX(1.5vw);
+    background-color: #0f0;
+}   
