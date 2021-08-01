@@ -12,6 +12,7 @@ html {
 }
 
 body {
+    padding: 0;
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -21,14 +22,18 @@ body {
 /* Contenedor princiapl = Control RGB */
 .controll{
     display: flex;
+    height: 100%;
     flex-direction: column;
     align-items: center;
     justify-items: center;
     border-radius: 30px;
-    border: #ccc 1.3px solid;
+    border: #555 1.3px solid;
     padding: 2.5vh 2vw;
     background-color:rgb(214, 211, 211);
-    visibility: visible;
+}
+
+.colorsControll { 
+    margin-right: 2px;
 }
 
 /* Contenedor hijo = Seccion titulo */
@@ -36,18 +41,20 @@ body {
     color: #cdc;
     display: flex;
     flex-direction: column;
-    width: 24vw;
+    height: 8vh;
+    width: 25vw;
     border: 1px solid #ccc;
-    padding: 5px;
+    padding: .9em;
     border-radius: 15px;
     margin-bottom: 5px;
     align-items: center;
-    justify-items: center;
+    /* vertical-align: middle; */
+    /* justify-items: center; */
     background-color: #000;
 }
 
 .title h2 {
-    font-size: 1.5vw;
+    font-size: 1.3vw;
     /* border: 2px solid white; */
     margin: 0;
 }
@@ -70,7 +77,8 @@ body {
     flex-direction: row;
     border-radius: 15px;
     border: #eee 1px solid;
-    width: 24vw;
+    width: 25vw;
+    height: 70vh;
     padding: .5vw;
     align-items: center;
     justify-content: center;
@@ -87,7 +95,8 @@ body {
     align-items: center;
     border-radius: 15px;
     border: #eee 1px solid;
-    width: 24vw;
+    width: 25vw;
+    height: 70vh;
     background-color: #000;
     padding: .5vw;   
 }
@@ -102,9 +111,10 @@ body {
     text-decoration: none;
 }
 
+/* ** Propiedad general botones */
 .button {
-    width: 3vw;
-    /* height: 6vh; */
+    width: 0vw;
+    height: 8vh; 
     border: #fcf;
     display: flex;
     justify-content: center;
@@ -231,32 +241,9 @@ body {
     border-radius: 1em;
 }
 
-/* *** BOTON CONNECT MQTT *** */
-
-.btn_mqtt {
-    display: flex;
-    width: 30vw;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin: 6px 13vw;
-    border: 1px solid white;
-    padding: 10px;
-    background-color:rgb(214, 211, 211);
-    border-radius: 10px;
-}
-.buttonConnect {
-    border-radius: 10px;
-    width: 13vw;
-    border: #ccc 1.3px solid;
-    padding: 2.5vh 2vw;
-    background-color:rgb(120, 120, 120);
-    font-weight: bold;
-    margin: 3px 0px;
-}
-
 .buttonConnect:hover {
-    background-color: rgb(80, 80, 80);
+    /* background-color: rgb(80, 80, 80); */
+    opacity: 0.7;
 }
 
 
@@ -273,6 +260,7 @@ body {
     display: flex;
     flex-direction: row;
     color: white;
+    /* outline: 2px solid red; */
     /* border:2px solid white; */
     align-items: center;
     justify-items: center;
@@ -291,15 +279,14 @@ body {
 .switch {
    width: 4.5vmax;
    height: 2.7vmax;
+   border-radius: 1em;
+   /* outline: 2px white solid; */
               
 }
 
-input {
-    background-color: black;
-}
-
 .switch input {
-    display: none
+    display: none; 
+    /* outline: 2px solid pink; */
 }  
 
 .slider {
@@ -309,27 +296,143 @@ input {
     background-color: #ccc;
     border-radius: 1em;
     transition: ease-in .10s;
+    /* outline: 2px solid pink; */
 }
 
-.slider:before {
+.slider::before {
     position: absolute;
     content: "";
     height: 2vmax;
     width: 2vmax;
     margin: .3vmax 0em 0em .4vmax;
-    background-color: rgb(255, 167, 5);
+    background-color: rgb(0, 0, 0);
     -webkit-transition: .4s;
     transition: ease-in .4s;
     border-radius: 2em;
 }
 
 input:checked + .slider {
-   background-color: #aaf; 
+   /* background-color: #aaf;  */
 }
 
 input:checked + .slider:before {
     -webkit-transform: translateX(1.5px);
     -ms-transform: translateX(1.5px);
-    transform: translateX(1.5vw);
-    background-color: #0f0;
+    transform: translateX(1.2vw);
+    opacity: 0.3;
 }   
+
+.deco1 {
+    margin: 50px 0px;
+    width: 200px;
+    height: 0px;
+    outline: 2px solid black;
+}
+
+.container-controlls {
+    display: inherit;
+    height: 100%;
+}
+
+
+/*
+************
+************
+    cont-mqtt
+************
+************
+*/
+
+/* >>>> Config containers <<<<*/
+
+/* Main container */
+.cont-mqtt {
+    display: flex;
+    height: 90vh;
+    width: 15em;
+    /* align-content: center; */
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    margin: 0px 15vw 0px 1px;
+    border: 1px solid white;
+    padding: 10px;
+    background-color:rgb(214, 211, 211);
+    border-radius: 10px;
+}
+
+/* Button container */
+
+.btn-mqtt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 12em;
+    /* outline: 2px solid black; */
+}
+
+.infored {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50%;
+    width: 12em;
+    /* outline: 2px solid black; */
+}
+
+/* >>>> Buttons controlls <<<<*/
+.buttonConnect {
+    border-radius: 10px;
+    width: 13vw;
+    border: #ccc 1.3px solid;
+    padding: 2.5vh 2vw;
+    background-color:rgb(120, 120, 120);
+    font-weight: bold;
+    margin-top: 0.8em;
+    cursor: pointer;
+}
+
+.buttonConnect:active {
+    transform: scale(.9);
+}
+
+.button:active {
+    transform: scale(.9);
+}
+
+.button:hover {
+    opacity: 0.5;
+}
+
+/* >>>> Status indicators <<<<*/
+.status_esp {
+    font-size: 0.9em;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
+    background: #eee;
+    border-radius: 20px;
+    border: 1px solid #222;
+}
+
+.status_broker {
+    font-size: 0.9em;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
+    background: #eee;
+    border-radius: 20px;
+    border: 1px solid #222;
+}
+
+.status_broker:hover {
+    opacity: 0.9;
+}
